@@ -1,0 +1,99 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <p>Owner</p>
+        <input type="text"  id="drivername">
+        <p>Caradd</p>
+        <input type="text" id="carname">
+        <p>car year</p>
+        <input type="text" id="caryear"> <br>
+        <p>Service</p>
+        <input type="text" id="serv"> <br>
+        <button id="mutq" 20px>ADD</button> <br>
+        
+        <script>
+            const cars = [
+    {
+        model: 'MERCEDES BENZ',
+        year: 2020,
+        owner: 0,
+        service: 1,
+    },
+    {
+        model: 'BMW',
+        year: 2015,
+        owner: 1,
+        service: 1,
+    },
+    {
+        model: 'AUDI',
+        year: 2001,
+        owner: 0,
+        service: 0,
+    },
+    {
+        model: 'LEXUS',
+        year: 2000,
+        owner: 2,
+        service: 0,
+    }
+]
+const owner = [
+    {
+        name: 'Armen',
+        index: 0,
+    },
+    {
+        name: 'Narek',
+        index: 1,
+    },
+    {
+        name: 'Hayk',
+        index: 2,
+    }
+]
+const service = [
+    {
+        serviceName: 'Mec Aniv',
+        index: 0,
+    },
+    {
+        serviceName: 'Poqr Aniv',
+        index: 1,
+    },
+];
+// const spasarkum1 = cars.filter ((item)=> item.service === 0);
+// const spasarkum2 = cars.filter ((item)=> item.service === 1);
+// console.log(spasarkum1)
+// console.log(spasarkum2)
+
+// const gtnel = cars.find((item)=> item.owner === 1)
+// console.log(gtnel)
+ 
+//  const mec = cars.filter ((item)=> item.year > 2010)
+//  console.log(mec)
+
+// const avelacnel = cars.map((item)=> item.year + 1)
+// console.log(avelacnel)
+
+let newcar = [];
+let addcar = document.querySelector('#mutq')
+let driveradd = document.querySelector('#drivername')
+let yearcar = document.querySelector('#caryear')
+let servis = document.querySelector('#serv')
+let anun = document.querySelector('#carname')
+
+addcar.addEventListener ('click', function () {
+    newcar.push( {
+        model: anun.value,
+        year: yearcar.value,
+        owner: driveradd.value,
+        service: servis.value,
+
+  }); 
+  console.log(newcar)
+});
+        </script>
+    </body>
+</html>
